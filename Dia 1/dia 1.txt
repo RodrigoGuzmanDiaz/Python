@@ -1,0 +1,64 @@
+
+/*como primer punto vamos a hacer un print que el print es la funcion qu enos permite mostrar en pantalla lo el resultado o lo que queremos imprimir o mostrar*/
+/*la estructura es la siguiente se utiliza la palabra clave print que hace referencia para mostrar algo en pantalla, seguido de unos parentesis y dentro de esos parentesi ponemos lo que queremos imprimir por ejemplo print*/("Hola mundo")
+/*es importante reconocer que python no utiliza punto y coma al finalizar d escribir en una linea*/
+/*al poner comillas simples dentro dentro de comillas dobles python lo tamará como si fuera parte del texto
+ademas tambien se pueden hacer operaciones basicas en python como por ejemplo */
+print(150+50)
+/*es importante no ponerlas entre comiilar por que si no, python interpretara que es un texto literal y lo imprimira tal cual como lo pusimos
+
+------Strings-------
+/*para realizar una concatenacion se utiliza el signo "+" antes y despues de una cadena por ejemplo si quiero concatenar dos cadenas una cadena de un espaico en blanco en medio*/
+print("hola"+" "+"fede")
+
+/*ahora vamos a ver como funciona la barra invertida
+pero que hace la barra invertida?
+es como si le dijera a python oye! el siguiente caracter no lo tomes como texto porfavor tomalo como un caracter especial como lo ve en el siguiente ejemplo*/
+print("Hola me llamo \"Rodrigo\"")
+
+/*\n -> salto de linea, para agregar una salto de linea se utiliza el caracter especial \n que nos ayuda a hacer una salto de linea en una misma instruccion*/
+print("Esta es una linea\nY esta es otra linea")
+print("Esta es una linea\nY esta es otra linea\nEsta es la tercer linea")
+
+/*otra forma de hacer un salto de linea pero sin usar le \n es usar otro print()*/
+print("Esta es una linea\nY esta es otra linea")
+print("Esta es la tercer linea")
+
+/*otro caracter especial que podemos encontrar el \t el cual significa tabular o poner una tabulacion*/
+print("Esta es una linea\nY esta es otra linea")
+print("\tEsta es la tercer linea")
+/*como podemos ver en el resultado hay una tabulacion en el resultado
+Esta es una linea
+Y esta es otra linea
+	Esta es la tercer linea
+*/
+
+/*otra forma de seguir usando caracteres especiales es por ejemplo cuando ponemos algo en ingles como por ejemplo una frase como esta This isn't a number*/
+/*pero cuando intentamos ponerlo en un print que utiliza comillas siples desde antes esto no s dará un error como el siguiente ejmplo*/
+print('This isn't a number')
+/*esto nos da un error*/
+
+/*si bien una forma es poner el print con comillar dobles seria una solucion factible una forma de utilizar un caracter especial es \*/
+print('This isn\'t a number')
+/*al utilizar la barra invertida le ayuda a python a entender mejor*/
+print('Este signo \\ es una barra invertida')
+/* porque si no la usaramos esto nos daría un error como este SyntaxWarning: invalid escape sequence '\ '
+  print('Este signo \ es una barra invertida')*/
+
+
+  --------Inputs-----------
+/*un input permite al usuario que ponga una entreda ya sea de texto o cantidades de numeros*/
+/*la estructura de un input es */
+input('mensaje de peticion para el usuario')
+/*ahora vmaos a ver un ejemplo de dos inputs que pidan el nombre y el apellido*/
+Dime tu nombre: Rodrigo
+Dime tu apellido: Guzmán
+
+Process finished with exit code 0
+
+/*tambien podemos conbinar o concatenar un print con un input */
+print("Tu nombre es "+ input("Dime tu numbre: "))
+/*otro ejemplo usando dos inputs en un mismo print*/
+print("Tu nombre es "+ input("Dime tu numbre: ") + " " + input("Dime tu apellido: "))
+/*una forma de d ehacer este codigo un poco mas legible es encerrar los inputs en parentesis (esto no afecta la funcinalidad del codigo si no nos ayuda a hacer mas legible y poder leer mejor el codigo y entenderlo mejor*/
+print("Tu nombre es "+ (input("Dime tu numbre: ")) + " " + (input("Dime tu apellido: ")))

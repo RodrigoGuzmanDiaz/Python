@@ -1,0 +1,1 @@
+print("El nombre de la cerveza \nes '"+ input("Cual es tu animal favorito?: ")+" "+input("Cual es tu comida favorita?: ")+"'\nFelicitaciones")
