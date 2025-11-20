@@ -1,0 +1,31 @@
+idea tarjeta
+en el apartado de tipos de datos y reafirmar los conceptos me gustaria que generaras tarjetas de conceptos para este apartado ocmo por ejemplo: cual es el tipo de dato que recibe decimales y eso
+aqui pueden haber practicas donde ya me piden a mi escribir codigo manualmente para reforzar loa parendido tambien me gustaria que me ayduaras a pensar nuevas tarjetas primero quiero qu eme las propongas y luego te digo si estan bien para que me ayudes a crearlas
+y porfavor creame tarjetas para recordar que para concatenar se utiliza el + (porque siempre se me olvida eso)
+-----tipos de datos---------
+-cuales es la coleecion de datos que se escribe con [] la respuesta seria lista, en el caso de {} en este caso seria los diccionarios y asi de igual manera con las tuplas o sets
+-ejercicios de poner ciertos valores que tu me das una serie de valores y y luego tu me dices que tengo que ponerlos ya sea una tupla,set, diccionario o list etc, es para practicar hacer esto y diferenciarlas
+
+-----variables----
+otra idea de tarjeta seria como revaloriza una varialbles como lo que se hizo con Juan y Laura
+datos como que el input cuanod un usuario poner un valor que nosotros le pedimos que pusieran siemrep devolverá un string, es decir la funciona input solo devulve string
+tranformar un numero ya sea int o float a cadena de texto
+
+---------conversiones-----
+como practicas de pasar un tipo de dato a otro
+
+-------formatear_cadenas------
+practicas como pasar de uan forma a otra como utilizando nuevas funcoines que mejorar y facilitan el diseño del codigo como por ejemplo (esta puede ser una buena practica)
+x = 10
+y = 5
+print("Mis numero son " + str(x) + " y "+ str(y))
+y pasarlo a esta forma mejor usando s-strings
+x=10
+y=5
+print(f"Mis numero son {x} y {y} es igual a {x+y}")
+
+----------operadores matematicos-------
+realizar operaicones utilizando s-trings para mostrar el resultado de una suma, resta, multiplicacion o division, etc
+
+-----redondear-----
+realizar ejercicios de reondeo como que tu me das una cantidad y tu me dices cuantos parametros tengo que mostrar y eso para practicar redondeo

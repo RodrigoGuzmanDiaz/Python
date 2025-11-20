@@ -1,0 +1,236 @@
+----------tipos de datos-----------
+/*en programacion:
+al texto se le conoce como string y se lo define con las letra (str), cualquier palabra signo, espacio o numero que esté escrito en tre commillas se le conocerá como string
+a los numeros enteros se les conoce como integer y los definimos como (int) y cualquier numero negativo positivo o negativo que no esté encerrado entre comillas es un integer(int)
+otro tipo de datos son los floating y se defin con (float) que al igual que los integer son numero pero con la particularidad que reciben numeros decimales es decir un entero seguido de un puno y que le sigue otro numero refernciando que tiene decimales, pueden ser tanto positivos o negativos que no tienen que estar encerrados entre comillas por si no dejarían de ser numeros y pasarian a ser texto
+
+listas (lst) es una coleccion ordenada de objetos y se tiene que escribir entre cochertes "[]" y puede tener contenido de todo tipo pueden contener muchos string, muchos integer, muchos float o una combinacion de las anteriores lo impotante de las listas es que todas tiene un orden, esto es muy importante a recalcar porque cada uno tiene un lugar designado que se debe de respetar o un indice que mepieza desde 0 hacia arriba
+diccionarios (dic) los diccionarios consisten en pares de palabras agrupadas encerradas en llaves "{}" cada par contiene dos elementos una clave y un valor, pensemos en los diaccionarios que ya conocemos que son funciona con una paabra y su definicion es una buna forma de ver esto, es importante recalcar que esto no contiene un orden es decir que podemos llmarlos sin respetar el orden gracias a que las referenciamos gracias a su clave
+tuples (tup) son algo parecidas a las lista en el aspecto de un conjunto ordenado de elementos pero una ccaracteristica fundamental su orden es inmutable es decir que no puede ser modificada ni alterada, en la lista hay metodos para agregar, eliminar y hasta reordenar pero esto no existe para las tuples o tuplas
+sets los sets tambien se escriben entre llaves "{}" y es un conjunto a diferencia de los tuples que es los set cada valor es unico e irrepetible es decir que no pueden existir dos valores iguales
+
+boolean (bool) solo pueden recibir dos valores true o false, esto nos ayuda a que por ejemplo si queremos que nuestro programa tome deciciones y con base a esas desiciones haga una cosa o haga otra*/
+
+
+---------variables------------
+/*las variables son espacios en memoria y nos ayudan a poder asignar valores a los nombres que ponemos en la variables
+por ejempoo*/
+/*es importante mencionar que el nombre que le pongamos no importa pero si es importante que el nombre de la varibble haga sentido con su valor porque por ejemplo si ponemos apellido = 25 esto de por si no tiene sentido entonces tenemos que ser prudentes con los tipos de datos que realizamos*/
+nombre = "Juan"
+print(nombre)
+/*nos podemos dar cuenta que que a la variable de que le pusimos nombre le asignamoe el valor juan como es queremos que sea una cadena de texto le ponemos comillas*/
+
+/*ahora vamos a reasignarle un valor a esta variable como se muestra en este ejemplo*/
+nombre = "Juan"
+print(nombre)
+
+#reasignando valor a una variable
+nombre = "Laura"
+print(nombre)
+
+/*utilizando variables con valores numero en lugar de utilizar strings usamos numero como se ve en este ejemplo:*/
+edad= 30
+edad2= 25
+print(edad+edad2)
+
+/*tambien se pueden utilizar con los inputs*/
+nombreVariable =  input("Peticion al usuario")
+/*como se ve en este ejemplo que alamcenamos lo que recibirá el input en una variables y luego la mostramos con un print*/
+nombre = input("Dime tu nombre: ")
+
+print("Tu nombre es "+nombre)
+
+/*tambien podmeos concatenar variables y luego almacenarlas dentro de otras variables*/
+color = "azul"
+pais = "Guamtela"
+frase = "Hola Rodrigo tu color favorito es el " + color + " y naciste en " + pais
+print(frase)
+
+
+--------------Nombres de variables-------
+regla 1: legible
+regla 2: unidad
+regla 3: hispanismo
+regla 4: números
+regla 5: signos
+regla 6: palabras clave
+
+regla 1
+/*siempre es importante ser descriptivo con los nombres de las varaibles que estamos utilizando por ejemplo*/
+por ejemplo
+nombre_perro = 'Simba'
+n = 'Simba'
+nomdemiprr = 'Simba'
+/*a esto nos referimos con ser prudentes con los nombres que les implementamos a las variables ya que debemos hacer que el codigo sea los mas legibles esto no significa que el codigo no vaya a funcionar si no que nos ayuda a nosotros como programadores a entender mejor el codigo, porque exkste la posiblilidad que otra perona venga a ver nuestro codigo o que nosotros dentro de una año volvamos a revisar este codigo, y esto no puede ayudar bastante a entender el codigo*/
+regla 2
+/*en programacion no podemos dejar espacios en blanco al momoento de nombrar variables como nombre de estudiante*/
+/*en otros lenguajes de programacion se utiliza el camelCase como por ejemplo nombreDeEstudiante o snake_case como por ejemplo nombre_de_estudiante pero en python lo mas utilizado es usar snake_case*/
+nombre_de_estudiante = 'Juan'
+regla 3
+/*como es el caso del español es mejor no utilizar acentos ni letras que no existan en el idioma ingles como usar ñ o música con tilde*/
+/*para solucionar esto los cambiamos por opciones que nos ayuden a entenderlo sin problema y que el propio lenguaje nos lo permita*/
+musica='Rock'
+arbol = 'Pino'
+anio = 1999
+regla 4
+/*se pueden utilizar nuermos en las variables pero siempre i cuando estas no vayan al principio como 8_mes (esto por parte del compialdor nos puede devolver un error) en lugar de usar esto podemos hacerlo asi mes_8 (el punto es que no vayan al principio del nombre de la variables y tiene que empezar por una letra)*/
+regla 5
+/*no se puede utilizar signos para nombrar variables como usar @, ?, %, >*/
+regla 6
+/*no podemos utilizar palabras clave como print, input, string, int como nombre de variables ya que estas palabras estan reservadas por el propio lenguaje de python por lo tanto no esta permitido utilizarlas para nombrar nuestras variables*/
+print="perro"
+input="carro"
+string="Juan"
+
+---------------integers y floats--------
+/*vamos a poner un codigo simple para ve los integers y floats**/
+mi_numero = 1
+print(mi_numero)
+
+/*para saber que tipo de dato se ta utilizando */
+print(type(mi_numero))
+/*con la funcion, type() devuelve el tipo de valor de uan salida*/
+
+/*tambien mi variables puede almacenar una operacion*/
+mi_numero = 1+3
+print(mi_numero)
+print(type(mi_numero))
+
+/*tambien podemos repetir una variable para realizar una operaiciones*/
+mi_numero = 1+3
+print(mi_numero + mi_numero)#debido a que no son string el signo de "+" es una suma
+print(type(mi_numero))
+
+/*ahora vamos a cambiar el numeor de int a float*/
+mi_numero = 3.2
+print(mi_numero)
+print(type(mi_numero))#devuelve que es de tipo float
+
+
+/*ahora vamos a conbinar un input*/
+edad = input("Dame tu edad: ")
+print("Tu edad es: " + edad)
+
+nueva_edad = 1 + edad
+print("vas a cumplir" + nueva_edad)
+/*al realizar sete ejemplo podemos asumir que puede hacer estas instrucciones sin problema pero lo cierto es que esot devolverá un error*/
+/*esto es debido a que la funcion input todo lo que ponga le usuario será un string es por esto que devulve un error porque estamos tratando de mostrar un string con un entrero por lo tanto esto nos devuelve un error*/
+/*basta con poner un print(type(edad)) para ver que es un str*/
+edad = input("Dame tu edad: ")
+print("Tu edad es: " + edad)
+print(type(edad))
+nueva_edad = 1 + edad
+print("vas a cumplir" + nueva_edad)
+
+/*para corroborar hagamos esto*/
+edad = input("Dame tu edad: ")
+print(edad+edad)
+
+/*resultado de esto:*/
+Dame tu edad: 20
+2020
+/*podmeos ver que esto es un concatenacion de strings*/
+
+----------------Conversiones de tipos de datos--------------
+/*existen dos tipos de conversiones las implicitas y las explicitas*/
+/*la implicita es realizada automaticamente por python sin que nos demos cuantes como el caso del input*/
+/*la explicita ocurre cuando nosotros explicitamente hacemos una conversion mediante codigo para que un tipo de datos se pueda converitr a otro tipo de datos*/
+/*usando este codigo podmeos que ver que num1 es un tipo int y num2 es de tipo float*/
+num1 = 20
+num2 = 29.6
+print(type(num1))
+print(type(num2))
+/*ahora vamos a tranformar num1 con una operacion*/
+num1 = 20
+num2 = 29.6
+num1 = num1 + num2
+
+print(type(num1))
+print(type(num2))
+/*al ver los tipos de datos vemos que son ambos float, este es un tipo de conversion implicita ya que al hacer la operacion pytho lo que hizo fue convertir el numero de int a float automaticamente sin que nosotros pidieras explicitamente que lo convirtiera*/
+
+
+/*ahora vamos a vonvertirlo a int el float que tenemos y eso se hace con la funicona de int()*/
+num1 = 3.8
+print(num1)
+print(type(num1))
+
+num2 = int(num1)
+print(num2)
+print(type(num2))
+
+/*de igual menera y viceversa*/
+num1 = 3
+print(num1)
+print(type(num1))
+
+num2 = float(num1)
+print(num2)
+print(type(num2))
+
+/*ahora los vamos a juntar con input que ya sabemos que todo lo que ponga el usuario se convierte a string automaticamente ahora ya con lo que sabemos podemos*/
+edad = input("Ingrese su edad: ")
+edad = int(edad)
+nueva_edad = edad + 1
+print("Vas a cumplir " + str(nueva_edad) + " el siguiente anio")
+/*como se puede apreciar se utilizaron las fuciona de int para convertir un string (que viene de input) a entero y un str para convertir un entero a string para mostrar el mensaje final*/
+
+--------Formatear cadenas---------
+x = 10
+y = 5
+print("Mis numero son " + str(x) + " y "+ str(y))
+/*esto es una cadena simple que convertimos lso int a str pero esto es poco practico y exite otra forma de hacer lo mismo pero mejor utilizando la funciona .format()*/
+
+x = 10
+y = 5
+print("Mis numero son {} y {}".format(x,y))
+/*utilizando .format y unas llaves python entiendes los parametros y los pone en donde se encuentran las llaves*/
+
+/*aqui hay otra forma de poder mejorar esta cadena*/
+x = 10
+y = 5
+print("Mis numero son {} y {} es igual a {}".format(x, y, x+y))
+
+/*pero hay una forma que hoy en dia es la mas utilizada que son los f-strings*/
+x=10
+y=5
+print(f"Mis numero son {x} y {y} es igual a {x+y}")
+/*este es la forma definitiva y mas utilizada hoy en dia para trabajar con numero y cantidades en python*/
+
+/*otro ejemplo usando f-strings*/
+color = "azul"
+matricula = 156484
+print(f"El auto es {color} y su matricula es {matricula}")
+
+----------operadores matematicos-------
+x=6
+y=2
+print(f"{x} mas {y} es igual a {x+y}")
+print(f"{x} menos {y} es igual a {x-y}")
+print(f"{x} por {y} es igual a {x*y}")
+print(f"{x} dividido {y} es igual a {x/y}")
+/*esto utilizando f-trings*/
+
+/*ahora lo harémos con uan division al piso que seria si por ejemplo una divisio queda con decimantes quitarlos el numero entero que la acompaña*/
+x=6
+y=2
+z=7
+
+print(f"{x} mas {y} es igual a {x+y}")#suma
+print(f"{x} menos {y} es igual a {x-y}")#resta
+print(f"{x} por {y} es igual a {x*y}")#multiplicacion
+print(f"{x} dividido {y} es igual a {x/y}")#division
+
+print(f"{z} dividido {y} es igual a {z//y}")#division al piso#al utilizar el // le decimos a python que no queremos decimales con la respuesta solo el resultado de la division al piso
+print(f"{z} dividido {y} es igual a {z%y}")#modulo
+print(f"{z} dividido {y} es igual a {z**y}")#potenciacion
+print(f"La raiz cuadrada de {x} es {x**0.5}")#raiz cuadrada #esta es una opercion ya que la potenciacino de 0.5 devuelve la raiz cuadrada de cualquier numero
+
+-----redondear-----
+/*la funciona round se utiliza para redondear el numero en dado caso que el resultado tenga decimales*/
+resultado = round(90/7)
+print(resultado)
+
+/*la funcion round puede recibir dos parametros el primero parametro que el el valor que queremos redondear y el segundo parametro seria la cantidad de decimales que quiero para ese redondeo*/
+resultado = round(90/7,3)
+print(resultado)
