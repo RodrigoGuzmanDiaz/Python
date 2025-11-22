@@ -1,0 +1,623 @@
+---------Metodo index-----
+el metodo index nos permite obtener un digito mediante un indice este se tiene que poner entre conrchetes [] recordemos que los recorridos empiezan desde 0
+por ejemplo si una palabra hola
+h seria la posicion 0, o seria la posicion 1 y asi sucecivamente
+-indices negativos
+pero tambien podemos poner indices negativas
+por ejemplo en el caso seria con la palabra hola
+en este caso la posicion 0 siempre es la misma, pero con la particularidad que si ponemos -1 empezaria de derecha a izquierda con -1,-2,-3....
+
+siempre recordar que la posicion 0 siempre es la misma lo unico que cambia es que el indice 0,1,2,3 es de izquierda a derecha
+y que cuando usamos indices negativos es 0 (que siempre es igual) pero cuando usamos -1,-2,-3 el indices siempre es de derecha a izquierda
+
+indice nomral
+mi_texto =  "Esta es una prueba"
+resultado = mi_texto[9]
+print(resultado)
+resutlado seria
+n
+indice negativo
+mi_texto =  "Esta es una prueba"
+resultado = mi_texto[-1]
+print(resultado)
+ahora el resultado de este codigo es:
+a
+
+ahora vamosa usar el metodo index para obtener la posicion de una letra por ejemplo de esta frase Esta es una prueba, saber en que posicion se encuantra la letra "n"
+mi_texto =  "Esta es una prueba"
+resultado = mi_texto.index("n")
+print(resultado)
+ahora vemos el resultado y nos devuelve esto
+9
+(al corroborar vemos que si es cierto)
+
+ahora que pasa si pedimos que busca el indice de una letra que no existe en el string como por ejemplo
+mi_texto =  "Esta es una prueba"
+resultado = mi_texto.index("j")
+print(resultado)
+esto nos devolverá un error
+  File "C:\Users\rodri\Desktop\Python\Dia 3\Index.py", line 2, in <module>
+    resultado = mi_texto.index("j")
+ValueError: substring not found
+
+ahora que pasa si buscamos palabras completas como por ejemplo "prueba" de la frase "Esta es una prueba"
+mi_texto =  "Esta es una prueba"
+resultado = mi_texto.index("prueba")
+print(resultado)
+esto nos devolverá el indice en donde COMIENZA la palabra
+el resultado en este caso es:
+12
+sale 12 por el motivo que en el indice 12 comienza la palabra
+
+de igual manera si ponemos una palabra que no se encuentra en la cadena apareceria un error con es el caso de pedir el indice de una letra que no existe en la cadena
+mi_texto =  "Esta es una prueba"
+resultado = mi_texto.index("prueva")
+print(resultado)
+en este caso no daria un error el resultado de esto es:
+Traceback (most recent call last):
+  File "C:\Users\rodri\Desktop\Python\Dia 3\Index.py", line 2, in <module>
+    resultado = mi_texto.index("prueva")
+ValueError: substring not found
+
+ahora vamos a pedir que busque una letra a partir de un indice que pongamos nosotros manual mente por ejemplo de la frase de "Esta es una prueba" que empiece desde el indice 5, al empezar desde el indice 5 ahora si buscará la primera letra a por ejemplo que encuentre
+mi_texto =  "Esta es una prueba"
+resultado = mi_texto.index("a",5)
+print(resultado)
+El resultado de este codigo es:
+10
+por el primer parametro es la letra que queremos que nos devuelva el indice y el segundo paraemtro es el indice de donde queremos que empiece
+
+ahora al ponerle un limite como ponerle un final al inicio que pusimos en el segundo parametro
+mi_texto =  "Esta es una prueba"
+resultado = mi_texto.index("a",11, 19)
+print(resultado)
+al ponerle un tercer parametro le decimos al metodo que empice desde el valor que pusimos en el segundo parametro y que el limite sea el tercer parametros
+el resutlado de este codigo es:
+17
+
+metodo rindex
+hace lo mismo que el index pero ocn la diferencia que busca de derecha a izquierda
+mi_texto =  "Esta es una prueba"
+resultado = mi_texto.rindex("a")
+print(resultado)
+el resultado de este codigo es:
+17
+
+-----------Extraer Sub-Strings------------
+lo primero es que utilizando corchetes poniendo, el primer factor es el comienzo y el segundo factor es el fin (pero sin contrarlo)
+texto = "ABCDEFGHIJKLM"
+framgmento = texto[2:5]
+print(framgmento)
+el resultado de este codigo es:
+CDE
+la explicacion simple es que empieza desde el indice do y temrinal en el indice 5 (pero sin contar el indice 5 por eos no se muestra la F en este caso)
+
+al poner un tercer factor es para poner cada cuando tiene que tomar un valor por ejemplo
+texto = "ABCDEFGHIJKLM"
+framgmento = texto[2:10:2]
+print(framgmento)
+en este caso para el tercer factor es decirle a python que solo tome el valor cada dos posiciones es decir toma una y omite una, toma una y omite otra, asi sucesivamente
+
+otra caso es poner solo un factor y agregar otros dos puntos
+texto = "ABCDEFGHIJKLM"
+framgmento = texto[2:]
+print(framgmento)
+esto quiere decir que empezamos desde el indice 2 y tomate el resto de la cadena hasta que termine (recordemos que el segundo factor es para poner un limite pero en este caso no lo estamos usando al poner : le decimos a pyton desde el indice que pusimos hasta el final de la cadena
+en esta caso el resultado del codigo es:
+CDEFGHIJKLM
+vemos que empezo desde el indice que pusmios alsta el final de la cadena
+
+ahora pondemos solo poner un limite y pedir que nos devuelva lo que esta antes por ejemplo
+texto = "ABCDEFGHIJKLM"
+framgmento = texto[:5]
+print(framgmento)
+en este caso le pedimos que el limite sea el indice, 5 y que nos devulva toso lo antenrio es como decir, desde el inicio hasta ese limite
+en este codigo el resultado es:
+ABCDE
+
+con este codigo podemos tener la cadena en orden inverso
+texto = "ABCDEFGHIJKLM"
+framgmento = texto[::-1]
+print(framgmento)
+el resultado de esta cadena es:
+MLKJIHGFEDCBA
+
+
+
+------Metodos de Strings--------
+upper()
+el metodo upper nos ayuda a convertir una cadena en mayusculas
+texto = "Este es el texto de Rodrigo"
+resultado = texto.upper()
+print(resultado)
+resultado
+ESTE ES EL TEXTO DE RODRIGO
+e inclusive tambien podemos usar indices para usar el upper
+como esto ejemplo
+texto = "Este es el texto de Rodrigo"
+resultado = texto[2].upper()
+print(resultado)
+el resultado de este codigo es
+T
+
+lower()
+este hace que la cadena se ponga con todas la lestras en minusculas
+texto = "Este es el texto de Rodrigo"
+resultado = texto.lower()
+print(resultado)
+el resultado de este codigo es:
+este es el texto de rodrigo
+
+split()
+split en ingles quiere decir separar esto metodo losque hace que separar todas la palabras y las encierra en una lista
+texto = "Este es el texto de Rodrigo"
+resultado = texto.split()
+print(resultado)
+el resutlado de este codigo es:
+['Este', 'es', 'el', 'texto', 'de', 'Rodrigo']
+tambien se le puede añadir con que letra o caracter hacer una serparcion por ejemplo
+texto = "Este es el texto de Rodrigo"
+resultado = texto.split("t")
+print(resultado)
+lo que hace esto es que separa las palabra y hasta que encuentre una letra t hace la separacion
+el resultado es:
+['Es', 'e es el ', 'ex', 'o de Rodrigo']
+
+join()
+lo que hace join es unir contenido de elementos de una lista
+por ejemplo
+a=  "Aprender"
+b= "Python"
+c = "es"
+d = "genial"
+e = " ".join([a,b,c,d])
+print(e)
+es importante que entre los parentesis del metodo hay que poner concheter (los corechetes hacer referencia a las listar) y dentro de lso corechetes deben ir los elementos que queremos juntar con join
+el resultado de este codigo es:
+Aprender Python es genial
+
+tambien podemos hacer cambios
+como en lugar de separarlos por un espaico en blanco los serpararemos por un guion por ejemplo
+a=  "Aprender"
+b= "Python"
+c = "es"
+d = "genial"
+e = "-".join([a,b,c,d])
+print(e)
+
+find()
+find es muy similar a index pero con la particulalidad de que si buscamos un caracter o palabra que no se encuentra en nuestra cadena de texto en lugar de devolvernos un error como lo hacia index, find lo que hace es devolver -1
+texto = "Este es el texto de Rodrigo"
+resultado = texto.find("j")
+print(resultado)
+el resultado es:
+-1
+
+tambine puede buscar cadenas completas
+texto = "Este es el texto de Rodrigo"
+resultado = texto.find("Rodrigo")
+print(resultado)
+el resultado al igual que index nos devulve la poscion en la cual se encuentra lo que queremos buscar
+20
+
+replace()
+replace utiliza dos parametros el primero parametro es lo que quermeos reemplazar y el segundo parametro,
+texto = "Este es el texto de Rodrigo"
+resultado = texto.replace("Rodrigo", "todos")
+print(resultado)
+el resultado de esto es:
+Este es el texto de todos
+
+tambien podemos solo reemplazar letras de una cadena
+texto = "Este es el texto de Rodrigo"
+resultado = texto.replace("o", "i")
+print(resultado)
+el resultado es:
+Este es el texti de Ridrigi
+
+
+-----Propiedades de String------
+podemos realizar multiplicaicones a las cladenas
+nombre = "kari"
+print(nombre*10)
+
+otra forma de hacer saltos de linea en un stringo es poner """ texto de la cadena con varias lineas """ poner tres coillas dolbes de apertura y tres comillas dobles de cierre para ver un string que puede se escrito en varias lineas sin usar caracteres especiales
+
+poema = """Mil pequeños peces blanco
+como si hirviera
+el color del agua"""
+print(poema)
+el resultado de este codigo es:
+Mil pequeños peces blanco
+como si hirviera
+el color del agua
+
+propiedad in
+es como usarlo para pregunta si una palabra se encuentra dentro de uan string
+como por ejmeplo
+poema = """Mil pequeños peces blanco
+como si hirviera
+el color del agua"""
+print("peces" in poema)
+en este caso preguntamos si la palabra peces se encuentra dentro de nuestro string
+para este codigo el resultado es:
+True
+
+tambien lo podemos negar
+poema = """Mil pequeños peces blanco
+como si hirviera
+el color del agua"""
+print("peces" not in poema)
+el resultado de este codigo es:
+False
+
+otra propiedad es una len()
+esto nos devulve el numero de caracteres que contiene un string
+poema = """Mil pequeños peces blanco
+como si hirviera
+el color del agua"""
+print(len(poema))
+el resultaado utilizando len() es:
+61
+
+--------Listas------
+len() en listas
+para saber la longitud de nuestra lista
+mi_lista = ['a','b','c']
+resultado = len(mi_lista)
+print(resultado)
+el resultado de este codigo es:
+3
+
+indices en lintas
+mi_lista = ['a','b','c']
+resultado = mi_lista[0]
+print(resultado)
+el resultado de este codigo es:
+a
+pero tambien podemos poner un inicio y una limite poniendo dos factores
+mi_lista = ['a','b','c']
+resultado = mi_lista[0:2]
+print(resultado)
+el resultado de este codigo:
+['a', 'b']
+tambien poniendolo de un inicio haste el final de la lista
+mi_lista = ['a','b','c']
+resultado = mi_lista[0:]
+print(resultado)
+el resultado de este codigo es:
+['a', 'b', 'c']
+
+concantenacion de listas
+podemos concatenar lista con el + que usamos para concatenar cadena tambien
+mi_lista = ['a','b','c']
+mi_lista2 = ['d','e','f']
+mi_lista3 = mi_lista + mi_lista2
+print(mi_lista3)
+el rsultado de este codigo es
+['a', 'b', 'c', 'd', 'e', 'f']
+
+podemos reemplazar valores usando indices y sobreescribir valores de las listas
+mi_lista = ['a','b','c']
+mi_lista2 = ['d','e','f']
+mi_lista3 = mi_lista + mi_lista2
+mi_lista3[0] = 'alpha'
+print(mi_lista3)
+el resultado de este codigo es:
+['alpha', 'b', 'c', 'd', 'e', 'f']
+
+append() en listas
+es para agregar contenido (es importante mencionar que eá agregado para que este nueovo valor sea el ultimo de la lista)
+mi_lista = ['a','b','c']
+mi_lista2 = ['d','e','f']
+mi_lista3 = mi_lista + mi_lista2
+mi_lista3.append("g")
+print(mi_lista3)
+reslutado de esto codigo es:
+['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+pop() en listas
+te utiliza para eliminar un valor de la lista (es importante mencionar de que si no ese especifica el valor a eliminar automaticamente eliminará el ultimo)
+mi_lista = ['a','b','c']
+mi_lista2 = ['d','e','f']
+mi_lista3 = mi_lista + mi_lista2
+mi_lista3.pop()
+print(mi_lista3)
+en este caso no especificamos que valor eliminar por lo tanto python eliminará el ultimo lvalo de la lista
+el resultado de este codigo es:
+['a', 'b', 'c', 'd', 'e']
+
+ahora en el siguiente ejemplo si lo vamos a especificar (esto funciona por indices)
+mi_lista = ['a','b','c']
+mi_lista2 = ['d','e','f']
+mi_lista3 = mi_lista + mi_lista2
+
+mi_lista3.pop(2)
+print(mi_lista3)
+el reultado de este codigo es:
+['a', 'b', 'd', 'e', 'f']
+
+un cosa que tambien podemos hacer es almacenar el valor eliminado en una variables para depsues utilizanlo
+mi_lista = ['a','b','c']
+mi_lista2 = ['d','e','f']
+mi_lista3 = mi_lista + mi_lista2
+
+eliminado = mi_lista3.pop(2)
+print(mi_lista3)
+print(eliminado)
+el resultado es:
+['a', 'b', 'd', 'e', 'f']
+c
+esto lo hacemos por si queremos utilizar el valor eliminado para otra cosa
+
+sort() en listas
+sort nos ayuda a ordenas los elementos
+lista = ['g','o','c', 'b', 'a', 'i']
+lista.sort()
+print(lista)
+en este caso los ordena por orden alfabetico por ser letras
+y es importante mencionar que sort no devuelve nada solo es una funcion que influye en la lista pero que a la vez no devuelve nada es un nonetype
+el resultado de este codigo es:
+['a', 'b', 'c', 'g', 'i', 'o']
+
+reverse()
+reverse a diferencia de reverse lo ordena pero al reves es decir pone el ultimo primero y asi sucesivamente, es lo contrario a sort
+lista = ['g','o','c', 'b', 'a', 'i']
+lista.reverse()
+print(lista)
+el igual que sort al usar reverse devolverá un nontype, revese solo influye en la lista pero no devulve nada
+el resultado de el ejemplo es:
+['o', 'i', 'g', 'c', 'b', 'a']
+
+-------Diccionarios------------
+recordemos que los diccionarios vienen por un identificador y una valor
+para ovtener una valor de un identificador seria asi
+diccionario = {'nombre' : 'Pedro', 'Estatura' : '1.65', "peso": 150}
+resultado = diccionario['peso']
+print(resultado)
+el resultado de este codigo es:
+150
+
+tambien podemos ponder lista y otros diccionarios dentro de un diccionario
+diccionario = {
+    'c1' : 55,
+    'c2': [10,20,30],
+    'c3': {'s1':100, 's2':200}
+}
+print(diccionario['c2'][1])
+aqui consultamos valores de uan lista dentro d euna siciconario
+el resutaldo de este codigo es
+20
+
+o trambien podemos consultao un diccionario dentro de otro diccionario
+diccionario = {
+    'c1' : 55,
+    'c2': [10,20,30],
+    'c3': {'s1':100, 's2':200}
+}
+print(diccionario['c3']['s1'])
+este es el resultado de este codigo:
+100
+
+otro ejemplo
+diccionario = {
+    'c1': ['a','b','c'],
+    'c2': ['d','e','f'],
+}
+print(diccionario['c1'][0].upper())
+resutado del codigo:
+A
+
+tambien podemos agregarles valores manualmente
+diccionario = {1:'a', 2:'b', 3:'c'}
+print(diccionario)
+diccionario[4] = 'd'
+print(diccionario)
+resultado de este codigo
+{1: 'a', 2: 'b', 3: 'c'}
+{1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+
+tambien podemos sobreescribir valores ya definidos
+diccionario = {1:'a', 2:'b', 3:'c'}
+print(diccionario)
+diccionario[4] = 'd'
+print(diccionario)
+diccionario[2] = 'e'
+print(diccionario)
+resultado de este codigo
+{1: 'a', 2: 'b', 3: 'c'}
+{1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+{1: 'a', 2: 'e', 3: 'c', 4: 'd'}
+
+keys() en diccionarios
+una forma que ne nos devulve solo las claves es utiliza el metodo keys()
+diccionario = {1:'a', 2:'b', 3:'c'}
+print(diccionario)
+diccionario[4] = 'd'
+print(diccionario)
+diccionario[2] = 'e'
+print(diccionario)
+
+print(diccionario.keys())
+este es el resultao del codigo:
+dict_keys([1, 2, 3, 4])
+
+values() en diccionarios
+esto elte metodo es para que nos devuelva los valores del diccionario
+diccionario = {1:'a', 2:'b', 3:'c'}
+print(diccionario)
+diccionario[4] = 'd'
+print(diccionario)
+diccionario[2] = 'e'
+print(diccionario)
+
+print(diccionario.keys())
+print(diccionario.values())
+resultado del codigo
+{1: 'a', 2: 'b', 3: 'c'}
+{1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+{1: 'a', 2: 'e', 3: 'c', 4: 'd'}
+dict_keys([1, 2, 3, 4])
+dict_values(['a', 'e', 'c', 'd'])
+
+items() en diccionarios
+utilizando el metodo items nos devuelve las claves y los valores
+diccionario = {1:'a', 2:'b', 3:'c'}
+print(diccionario)
+diccionario[4] = 'd'
+print(diccionario)
+diccionario[2] = 'e'
+print(diccionario)
+
+print(diccionario.keys())
+print(diccionario.values())
+print(diccionario.items())
+resultado del codigo:
+{1: 'a', 2: 'b', 3: 'c'}
+{1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+{1: 'a', 2: 'e', 3: 'c', 4: 'd'}
+dict_keys([1, 2, 3, 4])
+dict_values(['a', 'e', 'c', 'd'])
+dict_items([(1, 'a'), (2, 'e'), (3, 'c'), (4, 'd')])
+
+---------------tuples-----------
+las tuplas ya sabemos que no se pueden modificar
+podemos indezarlas
+mi_tuple = (1,2,3,4)
+print(mi_tuple[1])
+resultado del codigo:
+2
+
+como ya sabemos no se pueden modificar ni editar
+mi_tuple = (1,2,3,4)
+mi_tuple[0] = 5
+print(mi_tuple[0])
+esto devulve un error
+resultado (en este caso es un error)
+Traceback (most recent call last):
+  File "C:\Users\rodri\Desktop\Python\Dia 3\Tuples.py", line 2, in <module>
+    mi_tuple[0] = 5
+    ~~~~~~~~^^^
+TypeError: 'tuple' object does not support item assignment
+
+otro ejemplo de devolver un valor de un tuple dentro de otro tuple
+mi_tuple = (1,2,(10,20),4)
+print(mi_tuple[2][1])
+resultado de este codigo
+20
+
+metodo count() en tuples
+sirve para contar cuantes veces se repite un valor que le pedimos qu cuente
+t =  (1,2,3,1)
+print(t.count(1))
+resultado de este codigo
+2
+
+--------Sets---------
+hay dos formas de definir sets
+la primero es poiniendo explicitamente set
+mi_set = set([1,2,3,4,5])
+print(type(mi_set))
+print(mi_set)
+
+y la otra forma es con un juego de llaves
+otro_set = {1,2,3,4,5}
+print(type(otro_set))
+print(otro_set)
+el importante mencionar que python saber difencia un set de una diccionario porqu ererdaremos que los diccionario deben de tener en su estructura clar y valor en el caso de lso set no es asi es por eso que python sabe diferencia un set de un diccionario
+
+es improtante mencioar que en los set no podemos hacer asinacion de signos
+como agregar un nuevo valor al subindice 0 esto python no lo permitirá
+
+ademas otra cosa que no permite los set es la repeticion de valores
+mi_set = set([1,2,3,4,5,1,1,2,3,])
+print(mi_set)
+aqui agregamos varios 1 y varios 2 pero al momento ver el resultado
+este es el resultado para ver que los valores repetdos no se muestra
+{1, 2, 3, 4, 5}
+
+algo que no tengo permitirdo poner dentro de los set es poner un lista por ejemplo dentro de un set
+mi_set = {1,2,[1,5],4,5}
+esto devolverá un error
+
+pero pasa algo curioso si ponermos un tuple dentro de un set por ejemplo
+mi_set = {1,2,(1,5),4,5}
+print(mi_set)
+veamos el resultado de este codigo
+{1, 2, 4, 5, (1, 5)}
+pero porque pasa esto? por que con lista no se puede y con tuples si se puede, la cuestion es que los set requieren que todos sus elemtnos deban ser inmutables y como ya sabemos los tuples contiene elementos inmutables por lo tanto si los acpeta. recordemos lista y diccionarios no se pueden unir con set pero los tuples si pueden
+
+union() en set
+para unir dos sets utilizamos la funcion de union
+dentro del parametros ponemos el segundo set a unir
+s1 = {1,2,3}
+s2 = {4,5,6}
+s3 = s1.union(s2)
+print(s3)
+el resultado de este codigo es:
+{1, 2, 3, 4, 5, 6}
+
+add() en set
+es para agregar valores al set
+s1 = {1,2,3}
+s1.add(4)
+print(s1)
+resultado del codigo:
+{1, 2, 3, 4}
+
+remove() en set
+remove se usa para eliminar un valor del set
+s1 = {1,2,3}
+s1.remove(2)
+print(s1)
+es importante poner un valor que si exita en el set para que no devuelva un error
+resultado de este codigo
+{1, 3}
+
+discard() en set
+discard quiere decir descartar pero con l diferencia que si en dado caso no encuentraun valor para descartar y si ese valor para descartar no existe en el set no deolverá error, en lo demas hace lo mismo que remove()
+s1 = {1,2,3}
+s1.discard(4)
+print(s1)
+el resultado de este codigo es:
+{1, 2, 3}
+
+pop() en set
+este tambien eliminar valores pero si no ponemos nada en el parametro del metodo eliminara un resitro aleatoriamente
+s1 = {1,2,3}
+s1.pop()
+print(s1)
+resultado de este codigo es:
+{2, 3}
+
+clear() en set
+clear sirve para limpiar completamente el set y dejarlo vacio
+s1 = {1,2,3}
+s1.clear()
+print(s1)
+el resultado del codigo es:
+set()
+
+--------booleanos--------
+los booleanos son tipo de datos que que devuelven dos valores True o False pueden declararse explicitamente asignandles esos valores explicitamente o pueden venir de comparaciones
+como estos ejemplo de forma de devolver True o False en python
+var1 =  True
+var2 = False
+print(var1)
+print(var2)
+
+var3 = 4 > 5
+var4 = 4 > 3
+print(var3)
+print(var4)
+
+var5 = 5 == 8
+print(var5)
+
+var6 = 3!=6
+print(var6)
+
+lista = [1,2,3,4,5]
+control = 5 in lista
+print(control)
+

@@ -1,0 +1,10 @@
+---------metodo index--------
+tajetas para practicar como por ejemplo "devulve con un print la letra "d" de la frase "buanos dias" o algo asi, solo es una sugerencia
+tambien toma en cuentra cuanso se usa el segundo y tercer parametros (de poner un inicio y un limite al metodo de index) unos ejercicos de eso estarían genial
+tambien ejercicios con devolver la ultima letra r de una frase en concreto, la respuesta seria usar el rindex()
+-----extraer sub cadenas---
+como devolver el orden inverso de uan cadena como de esta cadena ABCDEFGHIJKLM devooverla en orden inverso como MLKJIHGFEDCBA
+como practicas de join(), replace(), split(), lower(), upper()
+
+-----Listas---
+concantenar dos listas
