@@ -1,0 +1,40 @@
+----Operadores de comparacion---
+como ponerme ejercicios de operadores de comparacion y yo tengo que poner si es true o false
+---Operadores logicos---
+como ponerme ejercicios logicos de comparacion y yo tengo que poner si es true o false
+---condicionales---
+me das codigos erroneaos y tengo que encontrar el error o algo asi dime que se te ocurre
+---Loop_for---
+tajeta para practicar iterar listas,tuples, diccionario (usando keys, values, items) o algo asi escucho sugerencias
+-------Loop_While------
+hacer ejercicios de while
+-----rango-------
+como por ejemplo hacer lista con range
+hacer recorrido con range
+que hace la funcion range si se usa dentro de un for con range con un parametro, dos parametros, tres parametros
+-------Enumerador------
+mejorar la manera de mostrar valores con enumerate(), dame mas sugerencias
+-------zip-------
+sobre como usar zip para jutnar valores de 2 o mas listas diferentes
+---------Min y Max---------
+como tomar el valor menor de una lista o diccionario o tupla, ejercicios o dame ejemplo y pregunta que devolveria el codigo
+--------Random--------
+practicar para aprender el uso de la libreria random y sus metodos de usar choice(), shuffle(), random(), randint(), uniform()
+--------Comprension de Listas-----
+practicas de como resumir codigo con conpresion de listas
+antes
+palabra = 'python'
+lista = []
+for letra in palabra:
+    lista.append(letra)
+print(lista)
+despues
+lista = [letra for letra in 'python']
+print(lista)
+
+aqui otro ejemplo
+millas = [1, 2, 3]
+lista = [km * 1609 for km in millas]
+print(lista)
+
+practicar el tema de como estructura una lista de de la lista que estamos creadno esto que dentro de los korchetes repetimos antes del for la variable temporal que vamos a usar

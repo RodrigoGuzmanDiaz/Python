@@ -1,0 +1,564 @@
+------Operadores de comparacion-----
+Operador de Igualdad '=='
+este operador lo que hacer es ver si los valores son de igual valores, en el caso de los umero evalida si el numero es el mismo y en el caso de lso string valida si el string es exactamente igual
+es importante mencionar que tiene que ser dos signos iguales '=='
+#verificar si un numero es igual a otro
+mi_bool =  10==25
+print(mi_bool)
+resultado de este codigo
+False
+
+ahora veamoslos con strings
+mi_bool =  'blanco'=='blanco'
+print(mi_bool)
+resultado de este codigo es:
+True
+es imrpotante mencionar que esto es sencible a las mayusculas por ejemplo
+mi_bool =  'Blanco'=='blanco'
+print(mi_bool)
+el resultado de este codigo es:
+False
+
+Operador Desigualdad '!='
+este operados lo que hace es que valida si los valores son desiguales o diferentes, es lo contrario al operador de igualdad
+mi_bool =  125 != 100
+print(mi_bool)
+resultado de este codigo es:
+True
+
+otro ejemplo
+mi_bool =  100 != 100
+print(mi_bool)
+resultado de este codigo
+False
+
+Operador mayor o menor '<' o '>'
+es operador valida si un valor es mayor o menor que el otro valor
+mi_bool = 125 > 100
+print(mi_bool)
+resultado de este codigo
+True
+
+otro ejemplo
+mi_bool = 90 > 100
+print(mi_bool)
+resultado de este codigo es:
+False
+
+ahora veamo el menor
+mi_bool = 90 < 100
+print(mi_bool)
+el resultado de este codigo es:
+True
+
+Mayor o igual que '>='
+este valida si es mayor o igual cual que el valor esl igual o mayor deolverá true de lo contrario devolverá false
+mi_bool = 100 >= 100
+print(mi_bool)
+resultado de este codigo:
+True
+
+Menor o igual que '>='
+este valida si es meno o igual cual que el valor el igual o menor deolverá true de lo contrario devolverá false
+mi_bool = 100 <= 100
+print(mi_bool)
+resultado de este codigo:
+True
+
+------Operadores Logicos-----
+#AND
+
+Resultado = True & True #Devolver True
+Resultado2 = False & True #Devolver Falso
+Resultad3 = True & False # Devolver Falso
+Resultad4 = False & False # Devolver Falso
+
+#OR
+
+Resultado5 = True | True # Devolver True
+Resultado6 = False | True # Devolver True
+Resultad7 = True | False # Devolver True
+Resultado8 = False | False # Devolver Falso
+
+#NOT
+
+Resultado9 = not True # Devolver Falso
+Resultado10 = not False # Devolver True
+
+
+Operador AND (and)
+Este operador devuelve True solo si ambas condiciones que se comparan son verdaderas. Si alguna es falsa, devuelve False.
+mi_bool = 10 > 5 and 8 == 8
+print(mi_bool)
+Resultado de este código:
+True
+
+mi_bool = 10 == 5 and 8 == 8
+print(mi_bool)
+Resultado de este código:
+False
+
+Operador OR (or)
+Este operador devuelve True si alguna de las condiciones es verdadera. Solo devuelve False si todas son falsas.
+mi_bool = 10 == 5 or 8 == 8
+print(mi_bool)
+Resultado de este código:
+True
+
+mi_bool = 10 == 5 or 8 == 7
+print(mi_bool)
+Resultado de este código:
+False
+
+Operador NOT (not)
+Este operador invierte el valor de la condición, es decir, si la condición es True devuelve False y si es False devuelve True.
+mi_bool = not (10 == 10)
+print(mi_bool)
+Resultado de este código:
+False
+
+mi_bool = not (5 > 10)
+print(mi_bool)
+Resultado de este código:
+True
+
+-----Condiionales-----
+ es poneler a a python condiciones para que se cumpla una condicion y si no se cumple que haga otra instruccion
+ en python el if es para agregar una condicion, elif es para agrega una condicion aparte del if principal, y el else que ejecuta una instrucciona si ninguna de las insrtucciones anteriores no se cumplen
+vamos a ver un ejemplo
+color = 'azul'
+
+if color == 'azul':
+    print('El color es azul')
+elif color == 'rojo':
+    print('El color es rojo')
+else:
+    print('El color no es azul ni rojo')
+
+para este ejmplo usamos la condiicion principal que es if, elif para agregar una o mas condiciones secundarias y else ejecuta en dado caso que ninguna condicion no se cumplan
+
+
+esta es otro ejemplo
+edad = 19
+calificacion = 8
+
+if edad >= 18:
+    print('Eres mayor de edad')
+    if calificacion >= 7:
+        print('Aprobado')
+    else:
+        print('No Aprobado')
+else:
+    print('No eres mayor de edad')
+este es el resultado :
+Eres mayor de edad
+Aprobado
+
+ejemplo de if-else
+edad = 9
+
+if edad >=18:
+    print("puedes pasar")
+    print("forma parte del if")
+else:
+    print("no puedes pasar")
+    print("forma parte del else")
+
+print("no forma parte de ninguna condicion")
+
+
+contraseña_almacenada = "DaltoMaestro"
+contraseña_escrita = "DaltoMaestro"
+
+if contraseña_almacenada == contraseña_escrita:
+    print("INICIANDO SESIÓN...")
+else:
+    print("CONTRASEÑA EQUIVOCADA, INTENTE DE NUEVO")
+
+ ejemplo usando if anidado (elif)
+ ingreso_mensual = 12000
+gastos_mensuales = 3000
+
+#if anidados y else if (elif)
+
+if ingreso_mensual > 10000:
+    if ingreso_mensual - gastos_mensuales <0:
+        print("Ahora si estas bien")
+    elif ingreso_mensual-gastos_mensuales > 3000:
+        print("bien pa, estas bien")
+    else:
+        print("y pa, estas gastando una banda, hay que ver si te alcanza")
+elif ingreso_mensual > 1000:
+    print ("estas bien en latinoamerica")
+elif ingreso_mensual > 500:
+    print ("estas bien en Argentina")
+elif ingreso_mensual > 200:
+    print ("estas bien en Venezuela")
+else :
+    print("no tienes dinero suficiente")
+
+---------Loop For-------
+la estructura del bucle o loop for en una lista es for <nombre de la variable que vamos a usar para esto loop esta varable puede ser temporal> in <nombre_de_lista>:
+una ejemplo seria así
+lista = ['a','b','c']
+for letra in lista:
+    print(letra)
+esto imprimirá cada elemento de la lista
+este es el resultado del codigo:
+a
+b
+c
+
+
+otro ejemplo de bucle for
+lista = ['a','b','c']
+for letra in lista:
+    numeroLetra = lista.index(letra) + 1
+    print(f"letra {numeroLetra}: {letra}")
+
+resultado de este codigo es:
+letra 1: a
+letra 2: b
+letra 3: c
+
+estes es otro ejemplo utilizando la funcion de statswith que nos ayuda a filtrar los nombre que comienza con una palabra o letra que escojamos
+lista = ['pablo', 'laura', 'fede', 'luis', 'julia']
+
+for nombre in lista:
+    if nombre.startswith('l'):
+        print(f'El nombre {nombre} SI comienza con L')
+    else:
+        print(f'El nombre {nombre} NO comienza con L')
+esto para ponerle una condicion con una funciona de startsWith
+el resulta de este codigo es:
+El nombre pablo NO comienza con L
+El nombre laura SI comienza con L
+El nombre fede NO comienza con L
+El nombre luis SI comienza con L
+El nombre julia NO comienza con L
+
+otro ejemplo
+lista_numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+suma_total = 0
+for valor in lista_numeros:
+    suma_total = suma_total + valor
+
+print(f'La suma total de los numeros es: {suma_total}')
+el resultado de este codigo es:
+La suma total de los numeros es: 55
+
+iterando en una tupla
+iterando en una tupla
+for a in (1,2,3):
+    print(a)
+
+tambien podemos ponerlos directamente en la esrtcutura de for lo que tiene que recorrer nuestra variable
+for objeto in [[1,2],[3,4],[5,6],[7,8]]:
+    print(objeto)
+
+iterando en una lista
+o tambien podemos poner mas de uan variable
+for a,b in [[1,2],[3,4],[5,6],[7,8]]:
+    print(a+b)
+el resultado de este codigo es:
+3
+7
+11
+15
+
+
+iterando diccionarios
+usando keys() en el diccionario devolverá las keys() y daría lo mismo que no ponemos eso como en el siguiente ejemplo
+diccionario = {'clave1': 'a', 'clave2': 'b', 'clave3': 'c'}
+for valor in diccionario:
+    print(valor)
+es importante mencionar que que solo ponemos for items in diccionario.keys(): esto dará el mismo resultado porque solo devolverá las keys o claves
+el restulta de este codigo es:
+clave1
+clave2
+clave3
+
+iterando diccionario con values()
+values solo devolverá solo el value de cada una de las claves del diccionario
+diccionario = {'clave1': 'a', 'clave2': 'b', 'clave3': 'c'}
+for valor in diccionario.values():
+    print(valor)
+el resultado de este codigo es:
+a
+b
+c
+
+iterando diccionario con items()
+items() de volverá tanto la clave como el value
+#iterando diccionario con items()
+diccionario = {'clave1': 'a', 'clave2': 'b', 'clave3': 'c'}
+for item in diccionario.items():
+    print(item)
+resultado de este codigo es:
+('clave1', 'a')
+('clave2', 'b')
+('clave3', 'c')
+
+-------Loop_While------
+el buble while se usa para que cuando se cumpla cuna condicion se ejecute un codigo hata que la condicion ya no se cumpla
+la estructura de un buble while es
+while <condicion>:
+    bloque si se cumple la condicion
+else:
+    bloque hasta que no se cumpla la condicion
+
+ejemplo basico
+monedas = 5
+
+while monedas > 0:
+    print(f"Tengo {monedas} monedas")
+    monedas -= 1
+else:
+    print("Ya no tengo monedas")
+
+otro ejemplo un poco mas avanzado
+vidas = 5
+
+while vidas > 0:
+    if  vidas == 1:
+        print(f"Tengo {vidas} vida restante")
+        vidas-=1
+    else:
+        print(f"Tengo {vidas} vidas restantes")
+        vidas -= 1
+else:
+    print("Ya no tengo vidas")
+resultado de este codigo es:
+Tengo 5 vidas restantes
+Tengo 4 vidas restantes
+Tengo 3 vidas restantes
+Tengo 2 vidas restantes
+Tengo 1 vida restante
+Ya no tengo vidas
+
+otro ejemplo para pregunta si se quiere continuar con el proceso
+respuesta = 's'
+while respuesta == 's':
+    respuesta = input('Quieres continuar? (s/n)')
+else:
+    print("Gracias")
+resultado de este codigo es:
+Quieres continuar? (s/n)s
+Quieres continuar? (s/n)s
+Quieres continuar? (s/n)n
+Gracias
+
+
+pass en while
+respuesta = 's'
+while respuesta == 's':
+    pass
+print('hola')
+sirve para dar paso al codigo porque while siempre pedirá un codigo cuando la condicion se cumpla por lo tanto, no permite que no se ponga codigo para eso usamos pass pero me gustaria que se explicase esto mas a fondo y en que situaicones usarlo
+
+break
+es para hacer que el buble se detenga cuando pase una condicion
+
+nombre = input("Escribe tu nombre: ")
+for letra in nombre:
+    if letra == 'r':
+        break
+    print(letra)
+en este caso cuando lea r se detendrá
+
+continue
+el continue sirve para que no se detenga el codigo cuando haya uan condicion
+nombre = input("Escribe tu nombre: ")
+for letra in nombre:
+    if letra == 'r':
+        continue
+    print(letra)
+
+-----Rango-----
+el rango es muy tuil cuando solo queremos que se nos muestra una cierta cntidad de valores que nosotros deseemos
+range(inicio) con un paramtro
+for numero in range(5):
+    print(numero)
+para este coso range() solo tiene un parametro qseto quiere decir que el recorrio empezará de 0 a 5
+el resultado de este codigo es:
+0
+1
+2
+3
+4
+
+range(inicio,limite) con dos parametros
+tambien podmeos poner un inicio y un limite al poner dos parametros en range
+for numero in range(1,5):
+    print(numero)
+el resultaod de este codigo es:
+1
+2
+3
+4
+5
+
+range(inicio, limite, pasos_a_saltarse) con tres parametros
+for numero in range(1,6,2):
+    print(numero)
+en este caso el codigo muestra la secuencia que se mostrara un valor cada dos valores
+resultado de este codigo:
+2
+4
+6
+8
+10
+
+tambien podemos crear lista con range aqui un ejemplo basico
+lista = list(range(1,11))
+print(lista)
+resultado de este codigo:
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+-------Enumerador-------
+primero veamos un codigo en el cual no usamos enumerate
+lista = ['a','b','c']
+indice = 0
+for item in lista:
+    print(indice,item)
+    indice += 1
+
+y ahora vemoas una forma ma eficiente de mostrar el mismo resultado pero con menos docito usando el metodo de Enumerate
+lista = ['a','b','c']
+for indice, item in enumerate(lista):
+    print(indice,item)
+
+ambos muestra este mismo resultado
+0 a
+1 b
+2 c
+
+tambien el metodo enumerate lo puede hacer si agregar dos variables
+lista = ['a','b','c']
+for item in enumerate(lista):
+    print(item)
+Enumerate se encarga de enumararlas automaticamente si solo especificamos una variable
+este es el resultado del codigo:
+(0, 'a')
+(1, 'b')
+(2, 'c')
+
+tambien podemos poner este resultado de tuples,
+tambien podemos enlistar estos tuples que nos devulve el enumerate
+lista = ['a','b','c']
+mis_tuples = list(enumerate(lista))
+print(mis_tuples)
+el resultaod de este codigo es:
+[(0, 'a'), (1, 'b'), (2, 'c')]
+
+
+---------zip--------
+el zip nos ayuda a que cuando tengamos dos listas
+podasmos juntar un valor de una lista y otro valor de otra lista dentro de tuples
+nombre = ['Rodrigo', 'Alberto', 'Michael', 'Freddy']
+edades= [25, 37, 43]
+nueva_lista = list(zip(nombre, edades))
+print(nueva_lista)
+
+resultado de este codigo es:
+[('Rodrigo', 25), ('Alberto', 37), ('Michael', 43)]
+
+tambine pueden ser dos o mas listas
+nombre = ['Rodrigo', 'Alberto', 'Michael', 'Freddy']
+edades= [25, 37, 43]
+ciudades = ['Madrid', 'Buenos Aires', 'Mixco']
+nueva_lista = list(zip(nombre, edades, ciudades))
+print(nueva_lista)
+
+una forma de verlo es podemo mostrar estos valores a la vez gracias a zip
+nombre = ['Rodrigo', 'Alberto', 'Michael', 'Freddy']
+edades= [25, 37, 43]
+ciudades = ['Madrid', 'Buenos Aires', 'Mixco']
+nueva_lista = list(zip(nombre, edades, ciudades))
+
+for nombre, edades, ciudades in nueva_lista:
+    print(f'{nombre} tiene {edades} anios y vive en {ciudades}')
+el resultado de este codigo es:
+Rodrigo tiene 25 anios y vive en Madrid
+Alberto tiene 37 anios y vive en Buenos Aires
+Michael tiene 43 anios y vive en Mixco
+
+el importante mencionar que zip se acopla a la cantidad de elemento de la lista mas pequeña es decir si una lista tiene 3 elementos y las demas tiene 4 o mas elementos zip solo va a otmar 3 elementos porque una lista solo tiene 3 elementos
+
+---------Min y Max---------
+min() es el metodo que devulve el valor menor de los elementos
+max() es el metodo que devuelve el valor mayor de los elementos
+lista = 50,60,70,80
+menor= min(lista)
+mayor= max(lista)
+print(f'El menor es {menor} y el mayor es {mayor}')
+el resultado de este codigo es:
+El menor es 50 y el mayor es 80
+
+aqui otro ejemplo con diccionarios
+diccionario = {'c1': 32, 'c2': 46, 'c3': 68}
+print(min(diccionario.values()))
+este es el resultado de este codigo
+32
+
+--------Random--------
+para utilizar random tenemos que importar una libreria
+from random import *
+
+metodo randint(inicio, limite) con dos parametros
+este lo que hará es selecionar un numero completamente al azar entre el inicio y el limite impuesto en los paramteos
+from random import *
+aleatorio = randint(1, 50)
+print(aleatorio)
+
+uniform(inicio, limite) numero aleatorio con decimales al azar entre el inicio y limite
+from random import *
+aleatorio = uniform(1, 2)
+print(aleatorio)
+tambien podemos conbinarlo con round() con el segundo aprametros para redondear los decimales
+from random import *
+aleatorio = round(uniform(1, 2),2)
+print(aleatorio)
+
+random() sin parametros
+random sin parametros devuelve el valor aleatorio entre 0 y 1
+from random import *
+aleatorio = random()
+print(aleatorio)
+
+
+choice()
+lo que hace este metodo es elecir un elemento aleatorio de una serie de opciones, por ejemplo de una lista, tupla, diccionario, etc
+colores = ['rojo', 'azul', 'verde', 'amarillo']
+color_aletorio = choice(colores)
+print(color_aletorio)
+
+
+shuffle
+lo que hace shuffle es revolver aletoriamente los valores de una serie de elementos por ejemplo
+numeros = list(range(10, 110, 10))
+shuffle(numeros)
+print(numeros)
+
+--------Comprension de Listas-----
+ejemplo de resumir lienas de codigo
+antes
+palabra = 'python'
+lista = []
+for letra in palabra:
+    lista.append(letra)
+print(lista)
+
+despues con conpresion de listas
+lista = [letra for letra in 'python']
+print(lista)
+
+ambos devuelven el mismo resultado
+['p', 'y', 't', 'h', 'o', 'n']
+
+como podemos ver la estrucrura dentro de la lista que estamos creadno esto que dentro de los korchetes repetimos antes del for la variable temporal que vamos a usar
+aqui otro ejemplo
+millas = [1, 2, 3]
+lista = [km * 1609 for km in millas]
+print(lista)
+
